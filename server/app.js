@@ -16,9 +16,9 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(join(__dirname, '..', '..', 'public')));
-app.get('/', (req,res) =>{
-    res.send('Hello Ecommerce')
-})
+app.get('/', (req, res) => {
+  res.send('Hello Ecommerce');
+});
 // app.use(router);
 
 module.exports = app;
