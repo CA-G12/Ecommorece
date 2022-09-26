@@ -15,7 +15,7 @@ function Login() {
           <input placeholder="PASSWORD" />
           <br />
           <br />
-          <Button />
+          <Button text="login" widthh="500px" />
         </form>
 
       </div>

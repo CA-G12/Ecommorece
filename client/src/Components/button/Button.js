@@ -1,7 +1,7 @@
-function Button() {
+function Button({ text , widthh }) {
   return (
     <div>
-      <button type="submit">Button</button>
+      <button type="submit" style={{ width: widthh }}>{text}</button>
     </div>
   );
 }
