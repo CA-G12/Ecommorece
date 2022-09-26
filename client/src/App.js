@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import Login from './Components/login/Login';
 import Signup from './Components/signup/Signup';
-
+import PriceFilter from './Components/landingPage/Filters/PriceFilter'; 
+import CategoryFilter from './Components/landingPage/Filters/CategoryFilter';
 function App() {
   useEffect(() => {
     fetch('/api').then((data) => data.json()).then((data) => console.log(data));
@@ -9,6 +9,8 @@ function App() {
   return (
     <div>
       {/* <Login /> */}
+      {/* <CategoryFilter />
+      <PriceFilter /> */}
       <Signup />
     </div>
   );
