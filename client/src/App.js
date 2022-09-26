@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Login from './Components/login/Login';
+import Signup from './Components/signup/Signup';
 
 function App() {
   useEffect(() => {
@@ -7,7 +8,8 @@ function App() {
   });
   return (
     <div>
-      <Login />
+      {/* <Login /> */}
+      <Signup />
     </div>
   );
 }

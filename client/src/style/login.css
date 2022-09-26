@@ -20,7 +20,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 20rem;
+  margin: 0 10rem;
 }
 .container-content img {
   display: flex;

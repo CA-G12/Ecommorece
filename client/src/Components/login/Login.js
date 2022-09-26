@@ -10,13 +10,13 @@ function Login() {
           <img alt="tset" src={image} />
           <br />
           <br />
-          <input placeholder="EMAIL" />
+          <input type="email" placeholder="EMAIL" />
           <br />
           <br />
-          <input placeholder="PASSWORD" />
+          <input type="ppassword" placeholder="PASSWORD" />
           <br />
           <br />
-          <Button text="login" />
+          <Button text="Login" />
         </form>
       </div>
     </div>
