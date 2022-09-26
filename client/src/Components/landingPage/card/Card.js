@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import '../../../style/Card.css';
+import Button from '../../button/Button';
 
 function Counter() {
   return (
     <div className="cart-counter">
-      <button type="submit">-</button>
+      <Button text="-" widthh="1.3rem" />
       <p>1</p>
-      <button type="submit">+</button>
-
+      <Button text="+" widthh="1.3rem" />
     </div>
   );
 }
@@ -31,7 +31,7 @@ function Card({ name }) {
         <div className="card">
 
           <Container />
-          <button type="submit">Add</button>
+          <Button className="add-btn" text="Add" widthh="3rem" />
         </div>
       );
     }
@@ -39,8 +39,10 @@ function Card({ name }) {
     if (name === 'cart') {
       return (
         <div className="card">
-          <button type="submit">X</button>
 
+          <div className="remove">
+            <button type="submit">x</button>
+          </div>
           <Container />
           <Counter />
 
