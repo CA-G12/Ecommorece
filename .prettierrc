@@ -1,5 +1,6 @@
 {
     "singleQuote": true,
     "semi": false,
-    "react/jsx-filename-extension": [1]
-}
+    "react/jsx-filename-extension": [1],
+  }
+
