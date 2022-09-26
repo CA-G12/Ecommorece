@@ -1,8 +1,7 @@
-function Button({ text , widthh }) {
-  return (
-    <div>
-      <button type="submit" style={{ width: widthh }}>{text}</button>
-    </div>
+import '../../style/button.css';
+
+function Button({ text, widthh }) {
+  return (<button type="submit" style={{ width: widthh || '100%' }}>{text}</button>
   );
 }
 

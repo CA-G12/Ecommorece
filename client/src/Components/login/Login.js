@@ -1,12 +1,13 @@
 import image from './cartIcon.png';
 import Button from '../button/Button';
+import '../../style/login.css';
 
 function Login() {
   return (
-    <div>
-      <img alt="tset" src={image} />
-      <div>
+    <div className="container">
+      <div className="container-content">
         <form>
+          <img alt="tset" src={image} />
           <br />
           <br />
           <input placeholder="EMAIL" />
@@ -15,9 +16,8 @@ function Login() {
           <input placeholder="PASSWORD" />
           <br />
           <br />
-          <Button text="login" widthh="500px" />
+          <Button text="login" />
         </form>
-
       </div>
     </div>
   );
