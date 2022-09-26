@@ -1,5 +1,5 @@
-import image from './cartIcon.png'
-import Button from '../button/Button'
+import image from './cartIcon.png';
+import Button from '../button/Button';
 
 function Login() {
   return (
@@ -17,9 +17,10 @@ function Login() {
           <br />
           <Button />
         </form>
+
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

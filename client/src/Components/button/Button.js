@@ -1,9 +1,9 @@
 function Button() {
   return (
     <div>
-      <button>Button</button>
+      <button type="submit">Button</button>
     </div>
-  )
+  );
 }
 
-export default Button
+export default Button;
