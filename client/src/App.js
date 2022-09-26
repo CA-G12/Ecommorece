@@ -1,17 +1,26 @@
 import { useEffect } from 'react';
+import {
+  BrowserRouter, Route, Routes,
+} from 'react-router-dom';
 import Signup from './Components/signup/Signup';
-import PriceFilter from './Components/landingPage/Filters/PriceFilter'; 
-import CategoryFilter from './Components/landingPage/Filters/CategoryFilter';
+import LandingPage from './Components/landingPage/landing';
+import Login from './Components/login/Login';
+
 function App() {
   useEffect(() => {
-    fetch('/api').then((data) => data.json()).then((data) => console.log(data));
+    fetch('/api')
+      .then((data) => data.json())
+      .then((data) => console.log(data));
   });
   return (
     <div>
-      {/* <Login /> */}
-      {/* <CategoryFilter />
-      <PriceFilter /> */}
-      <Signup />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -5,9 +5,9 @@ import Button from '../../button/Button';
 function Counter() {
   return (
     <div className="cart-counter">
-      <Button text="-" widthh="1.3rem" />
+      <Button text="-" width="1.3rem" />
       <p>1</p>
-      <Button text="+" widthh="1.3rem" />
+      <Button text="+" width="1.3rem" />
     </div>
   );
 }
@@ -31,7 +31,7 @@ function Card({ name }) {
         <div className="card">
 
           <Container />
-          <Button className="add-btn" text="Add" widthh="3rem" />
+          <Button className="add-btn" text="Add" width="3rem" />
         </div>
       );
     }
