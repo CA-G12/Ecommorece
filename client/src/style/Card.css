@@ -1,0 +1,56 @@
+root{
+    --Cerulean-Blue: #2A57C0;
+    --Bright-Gray: #EDEDF0;
+    --Oxford-Blue: #0C2146;
+    --New-Car : #2148c0;
+}
+
+
+
+*{
+    font-family: 'Inter';
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+    box-sizing: border-box;
+
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    height: 20srem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product-img{
+width: 10rem;
+height: 13rem;
+border-radius: 15px;
+padding: 10px;
+}
+
+.cart-counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-category{
+    color:#787885;
+}
