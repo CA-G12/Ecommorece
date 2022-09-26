@@ -1,10 +1,10 @@
+const { join } = require('path');
+
 const express = require('express');
 const compression = require('compression');
-const { join } = require('path');
 const cookieParser = require('cookie-parser');
-// const router = ('../routers');
-
 require('dotenv').config();
+// const router = ('../routers');
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(join(__dirname, '..', '..', 'public')));
 app.get('/api', (req, res) => {
-  res.json({ message: 'Hello from server' })
+  res.json({ message: 'Hello from server' });
 });
 // app.use(router);
 
