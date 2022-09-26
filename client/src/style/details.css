@@ -1,0 +1,33 @@
+
+.product-img {
+    width: 20rem;
+    border-radius: 15px;
+    padding: 0.3rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+.details button{
+    font-size: 0.8rem;
+    font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid #9DC2FF;
+    background-color: white;
+}
+
+
+.div-btn{
+    width: 100%;
+    display: flex;
+   justify-content: flex-end;
+}
