@@ -2,14 +2,21 @@ html {
   font-size: 10px;
 }
 button {
+  margin: 1px;
+  padding: .5rem;
   border: solid 1px #000;
   font-weight: 600;
   font-size: 1.6rem;
+  font-family: inherit;
   line-height: 2rem;
   text-align: center;
   text-transform: uppercase;
-  color: #2148c0;
   border-radius: 1rem;
   height: 3.5rem;
-  width: 100%;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+
+ 
 }
+
+
+

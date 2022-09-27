@@ -1,4 +1,5 @@
 function Navbar() {
+  const auth = false;
   return (
     <div className="nav-bar">
       <h1>Fashonista</h1>
@@ -13,13 +14,20 @@ function Navbar() {
       </form>
       <div id="nav-right">
 
-        <button type="submit">Sign In</button>
-        <button type="submit">Sign Up</button>
+        <Navright auth={auth} />
 
       </div>
 
     </div>
 
+  );
+}
+function Navright({ auth }) {
+  return (
+    <>
+      <button type="submit">{auth ? 'User name' : 'Sign in'}</button>
+      <button type="submit">{auth ? 'Cart' : 'Sign Up' }</button>
+    </>
   );
 }
 
