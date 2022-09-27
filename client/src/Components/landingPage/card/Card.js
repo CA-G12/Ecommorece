@@ -49,11 +49,13 @@ function Card({ name }) {
         </div>
       );
     }
-    return (
-      <div className="card">
-        <Container />
-      </div>
-    );
+    if (name === 'notAuth') {
+      return (
+        <div className="card">
+          <Container />
+        </div>
+      );
+    }
   }
 }
 
