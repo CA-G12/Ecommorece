@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(join(__dirname, '..', '..', 'public')));
 app.get('/api', (req, res) => {
-  res.json({ message: 'Hello from server' });
+  res.json({ message: 'auth' });
 });
 // app.use(router);
 

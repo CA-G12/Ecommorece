@@ -16,18 +16,22 @@ root {
 }
 
 
-.container {
+/* .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+} */
 
+
+.content{
+    font-size: 16px;
+    text-align: center;
+}
 .card {
     margin: 2rem;
-    padding: 0.3rem;
-    width: 15rem;
-    height: 22rem;
+    padding: 2rem;
+    
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -41,7 +45,7 @@ root {
 }
 
 .product-img {
-    width: 10rem;
+    width: 14rem;
     border-radius: 15px;
     padding: 0.3rem;
 }
@@ -63,7 +67,10 @@ root {
 
 
 .cart-counter button {
-    margin: 2px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-category {
@@ -90,10 +97,14 @@ root {
 .remove button {
     border-radius: 50%;
     width: 1rem;
+   
     color: crimson;
     font-size: 8px;
     font-weight: 300;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
