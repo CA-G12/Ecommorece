@@ -37,28 +37,28 @@ function LandingPage() {
 
     <div>
       <Nav />
-    <div style={{ display: 'flex', marginTop: '2rem' }}>
-      <div className="filterSection">
-        <CategoryFilter CategoryState={CategoryState} setCategoryState={setCategoryState} />
-        <PriceFilter />
-      </div>
-      <div style={{
-        width: '80%',
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      >
+      <div style={{ display: 'flex', marginTop: '2rem' }}>
+        <div className="filterSection">
+          <CategoryFilter CategoryState={CategoryState} setCategoryState={setCategoryState} />
+          <PriceFilter />
+        </div>
+        <div style={{
+          width: '80%',
+          display: 'flex',
+          flexWrap: 'wrap',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        >
 
-        {
-          cards.filter((card) => (CategoryState === 'all' || card.category === CategoryState)).map((card) => <Card name={isAuth} card={card} key={Math.random() + Date.now()} />)
-}
+          {
+              cards.filter((card) => (CategoryState === 'all' || card.category === CategoryState)).map((card) => <Card name={isAuth} card={card} key={Math.random() + Date.now()} />)
+            }
 
+        </div>
       </div>
     </div>
-
   );
 }
 
