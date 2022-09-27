@@ -1,18 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
 .radio {
-  margin-top: 2px;
-  margin-left: 20px;
+  margin: 0.3rem 2rem;
 }
 .title {
-  margin-left: 30px;
+  margin: 1.5rem 3rem;
   font-weight: 500;
-  font-size: 24px;
-  margin-top: 15px;
-  height: 20px;
+  font-size: 2.4rem;
 }
 .all-radio {
-  margin-bottom: 25px;
-  margin-left: 18px;
+  margin: 2.5rem 1.8rem;
 }
 .label {
-  margin-left: 10px;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 2rem;
+  margin-right: 4rem;
 }

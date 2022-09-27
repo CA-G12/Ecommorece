@@ -3,12 +3,13 @@ import '../../../style/PriceFilter.css';
 function PriceFilter() {
   return (
     <div className="price-filter-container">
-      <h3>Price</h3>
-      <label htmlFor="max">Max</label>
-      <input type="range" name="max" id="max" className="max-range" />
-
-      <label htmlFor="min">Min</label>
-      <input type="range" name="min" id="min" className="min-range" />
+      <h3 className="title">Price</h3>
+      <div className="max-min">
+        <label className="max" htmlFor="max">Max</label>
+        <input type="range" name="max" id="max" className="max-range" />
+        <label className="mix" htmlFor="min">Min</label>
+        <input type="range" name="min" id="min" className="min-range" />
+      </div>
     </div>
   );
 }

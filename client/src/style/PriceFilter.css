@@ -1,9 +1,19 @@
-.price-filter-container {
-  display: flex;
-  flex-direction: column;
-  width: 12%;
-  margin-left: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
 
+.max-min {
+  margin: 0 45px;
+  width: 10rem;
+}
+
+label {
+  font-size: 1.4rem;
 }
 .max-range {
   -webkit-appearance: none;
@@ -20,7 +30,7 @@
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
-  border-radius: 15px;
+  border-radius: 1.5rem;
 }
 .max-range input {
   height: 20px;
@@ -28,53 +38,52 @@
 .max-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
   background: white;
   cursor: pointer;
   border-radius: 50%;
 }
 .max-range::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   background: white;
   cursor: pointer;
   border-radius: 50%;
 }
 .min-range {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(9, 9, 121, 1) 35%,
-      rgba(0, 212, 255, 1) 100%
-    );
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
-    border-radius: 15px;
-  }
-  .min-range input {
-    height: 20px;
-  }
-  .min-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: white;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  .min-range::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: white;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 1.5rem;
+}
+.min-range input {
+  height: 2rem;
+}
+.min-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.min-range::-moz-range-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
