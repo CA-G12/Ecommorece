@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
+
 function Navbar() {
-  const auth = false;
   return (
     <div className="nav-bar">
       <h1>Fashonista</h1>
@@ -8,23 +9,25 @@ function Navbar() {
           id="search-bar"
           placeholder="Search"
           type="search"
+
         />
+
       </form>
       <div id="nav-right">
 
-        <Navright auth={auth} />
+        <Link to="/login">
+          {' '}
+          <button type="submit">Sign In</button>
+        </Link>
+
+        <Link to="/signup">
+          <button type="submit">Sign Up</button>
+        </Link>
 
       </div>
 
     </div>
-  );
-}
-function Navright({ auth }) {
-  return (
-    <>
-      <button type="submit">{auth ? 'User name' : 'Sign in'}</button>
-      <button type="submit">{auth ? 'Cart' : 'Sign Up' }</button>
-    </>
+
   );
 }
 
