@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import CategoryFilter from './Filters/CategoryFilter';
 import PriceFilter from './Filters/PriceFilter';
+import Nav from '../nav/Navbar';
+
 import Card from './card/Card';
 import '../../style/FilterCategory.css';
 
@@ -32,6 +34,9 @@ function LandingPage() {
     },
   ];
   return (
+
+    <div>
+      <Nav />
     <div style={{ display: 'flex', marginTop: '2rem' }}>
       <div className="filterSection">
         <CategoryFilter CategoryState={CategoryState} setCategoryState={setCategoryState} />
@@ -50,8 +55,10 @@ function LandingPage() {
         {
           cards.filter((card) => (CategoryState === 'all' || card.category === CategoryState)).map((card) => <Card name={isAuth} card={card} key={Math.random() + Date.now()} />)
 }
+
       </div>
     </div>
+
   );
 }
 

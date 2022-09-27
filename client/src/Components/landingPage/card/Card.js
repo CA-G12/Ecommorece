@@ -14,13 +14,12 @@ function Counter() {
 
 function Container({ card }) {
   return (
-    <>
+    <div className="content">
       <img className="product-img" alt="product-img" src={card.img_url} />
       <p className="product-name">{card.name}</p>
       <h3 className="product-price">{card.price}</h3>
       <p className="product-category">{card.category}</p>
-
-    </>
+    </div>
   );
 }
 
