@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Navbar() {
   return (
     <div className="nav-bar">
@@ -13,8 +15,14 @@ function Navbar() {
       </form>
       <div id="nav-right">
 
-        <button type="submit">Sign In</button>
-        <button type="submit">Sign Up</button>
+        <Link to="/login">
+          {' '}
+          <button type="submit">Sign In</button>
+        </Link>
+
+        <Link to="/signup">
+          <button type="submit">Sign Up</button>
+        </Link>
 
       </div>
 
