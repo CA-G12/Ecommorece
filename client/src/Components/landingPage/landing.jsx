@@ -42,6 +42,7 @@ function LandingPage() {
         <div className="filterSection">
           <CategoryFilter CategoryState={CategoryState} setCategoryState={setCategoryState} />
           <PriceFilter PriceState={PriceState} setPriceState={setPriceState} />
+
         </div>
         <div style={{
           width: '80%',
@@ -56,11 +57,10 @@ function LandingPage() {
           {
             cards.filter((card) => (card.price >= PriceState.min && card.price <= PriceState.max) && (CategoryState === 'all' || card.category === CategoryState)).map((card) => <Card name={isAuth} card={card} key={Math.random() + Date.now()} />)
           }
-
+          
         </div>
       </div>
     </div>
-
   );
 }
 
