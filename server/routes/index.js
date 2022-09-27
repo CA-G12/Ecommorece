@@ -1,5 +1,9 @@
-const userRouter = require('./userRoutes');
+const router = require('express').Router();
 
-module.exports = {
-    userRouter,
-}
+const userRouter = require('./userRoutes');
+const productsRouter = require('./productsRoutes');
+
+router.use(userRouter)
+router.use(productsRouter)
+
+module.exports = router
