@@ -5,12 +5,31 @@ import '../../style/FilterCategory.css';
 
 function LandingPage() {
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex', marginTop: '2rem' }}>
       <div className="filterSection">
         <CategoryFilter />
         <PriceFilter />
       </div>
-      <div style={{ marginTop: '4rem' }}>
+      <div style={{
+        width: '80%',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+      >
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
+        <Card name="home" />
         <Card name="home" />
       </div>
     </div>
