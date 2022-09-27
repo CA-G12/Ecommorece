@@ -1,5 +1,5 @@
 {
-    "singleQuote": true,
-    "semi": false,
-    "react/jsx-filename-extension": [1]
+  "singleQuote": true,
+  "semi": false,
+  "endOfLine": "auto"
 }
