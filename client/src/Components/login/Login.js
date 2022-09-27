@@ -1,6 +1,6 @@
-import image from './cartIcon.png';
-import Button from '../button/Button';
-import '../../style/login.css';
+import image from './cartIcon.png'
+import Button from '../button/Button'
+import '../../style/login.css'
 
 function Login() {
   return (
@@ -20,7 +20,7 @@ function Login() {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default Login;
+export default Login

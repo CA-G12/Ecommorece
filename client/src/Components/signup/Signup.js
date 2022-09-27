@@ -1,6 +1,6 @@
-import image from './cartIcon.png';
-import Button from '../button/Button';
-import '../../style/signup.css';
+import image from './cartIcon.png'
+import Button from '../button/Button'
+import '../../style/signup.css'
 
 function Signup() {
   return (
@@ -28,7 +28,7 @@ function Signup() {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default Signup;
+export default Signup

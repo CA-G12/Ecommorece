@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import {
   BrowserRouter, Route, Routes,
@@ -12,8 +13,8 @@ function App() {
   useEffect(() => {
     fetch('/api')
       .then((data) => data.json())
-      .then((data) => console.log(data));
-  });
+      .then((data) => console.log(data))
+  })
   return (
     <div>
       <BrowserRouter>
@@ -27,7 +28,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

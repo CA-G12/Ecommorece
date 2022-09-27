@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import '../../../style/Card.css';
-import Button from '../../button/Button';
+import '../../../style/Card.css'
+import Button from '../../button/Button'
 
 function Counter() {
   return (
@@ -9,7 +9,7 @@ function Counter() {
       <p>1</p>
       <Button text="+" widthh="1.3rem" />
     </div>
-  );
+  )
 }
 
 function Container({ card }) {
@@ -20,7 +20,7 @@ function Container({ card }) {
       <h3 className="product-price">{card.price}</h3>
       <p className="product-category">{card.category}</p>
     </div>
-  );
+  )
 }
 
 function Card({ name, card }) {
@@ -28,34 +28,31 @@ function Card({ name, card }) {
     if (name === 'auth') {
       return (
         <div className="card">
-
           <Container card={card} />
           <Button className="add-btn" text="Add" widthh="3rem" />
         </div>
-      );
+      )
     }
 
     if (name === 'cart') {
       return (
         <div className="card">
-
           <div className="remove">
             <button type="submit">x</button>
           </div>
           <Container card={card} />
           <Counter />
-
         </div>
-      );
+      )
     }
     if (name === 'home') {
       return (
         <div className="card">
           <Container card={card} />
         </div>
-      );
+      )
     }
   }
 }
 
-export default Card;
+export default Card
