@@ -4,7 +4,7 @@ const express = require('express')
 const compression = require('compression')
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
-const {userRouter} = require('./routes');
+const router = require('./routes');
 
 const app = express()
 
@@ -16,10 +16,9 @@ app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
 
 app.use(express.static(join(__dirname, '..', '..', 'public')))
-app.use(userRouter);
+app.use(router);
 app.get('/api', (req, res) => {
   res.json({ message: 'home' }) // auth or home
 })
-// app.use(router);
 
 module.exports = app
