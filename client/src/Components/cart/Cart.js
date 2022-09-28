@@ -10,7 +10,7 @@ function Cart({auth, setAuth}) {
 
   useEffect(() => {
     fetch('/getCartItems').then(response => response.json()).then(data => setCardData(data));
-  }, [])
+  })
 
   // console.log(cartData);
 
