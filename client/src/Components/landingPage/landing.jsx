@@ -6,7 +6,8 @@ import Nav from '../nav/Navbar';
 import Card from './card/Card';
 import '../../style/FilterCategory.css';
 
-function LandingPage() {
+function LandingPage({auth}) {
+  
   const [CategoryState, setCategoryState] = useState('all');
   const [PriceState, setPriceState] = useState({ max: 10, min: 0 });
   const [isAuth, setISAuth] = useState('notAuth');
@@ -37,7 +38,7 @@ function LandingPage() {
   return (
 
     <div>
-      <Nav />
+      <Nav auth={auth}/>
       <div style={{ display: 'flex', marginTop: '2rem' }}>
         <div className="filterSection">
           <CategoryFilter CategoryState={CategoryState} setCategoryState={setCategoryState} />

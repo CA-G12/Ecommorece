@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const { setUserQuery } = require('../../database/queries');
 
 const setUser = (req, res, next) => {
-    console.log('its setUser controller')
+    
     const {
         firstName, lastName, email, password, imgUrl
     } = req.body;
@@ -14,8 +14,8 @@ const setUser = (req, res, next) => {
                 }).then((data) => {
                     if (data.rowCount) {
                         req.body.userId = data.rows[0].id;
-                        res.json({
-                            msg:`logged in with ${data.rows[0].id}`
+                        res.status(200).json({
+                            msg:`logged in with id : ${data.rows[0].id}`
                         })
                     }
 
