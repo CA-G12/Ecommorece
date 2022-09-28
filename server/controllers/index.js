@@ -1,4 +1,4 @@
-const { setUser } = require('./users');
+const { setUser, getUser } = require('./users');
 const { getProducts } = require('./products');
 const { getCartItems, deleteCartItem, addCartItem } = require('./cart');
 
@@ -7,5 +7,6 @@ module.exports = {
     getProducts,
     getCartItems,
     deleteCartItem,
-    addCartItem
+    addCartItem,
+    getUser
 }
