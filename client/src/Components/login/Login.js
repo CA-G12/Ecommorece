@@ -43,10 +43,10 @@ function Login({ setAuth }) {
           <img alt="tset" src={image} />
           <br />
           <br />
-          <input type="email" placeholder="EMAIL" />
+          <input type="email" placeholder="EMAIL" name="email" />
           <br />
           <br />
-          <input type="password" placeholder="PASSWORD" />
+          <input type="password" placeholder="PASSWORD" name="password"/>
           <br />
           <br />
           <Button text="Login" />
