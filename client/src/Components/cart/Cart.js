@@ -1,5 +1,5 @@
-import Nav from '../nav/Navbar';
-import Card from '../landingPage/card/Card';
+import Nav from '../nav/Navbar'
+import Card from '../landingPage/card/Card'
 
 function Cart() {
   return (
@@ -7,7 +7,7 @@ function Cart() {
       <Nav />
       <Card name="cart" />
     </>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

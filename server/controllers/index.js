@@ -1,12 +1,18 @@
-const { setUser, getUser } = require('./users');
-const { getProducts } = require('./products');
-const { getCartItems, deleteCartItem, addCartItem } = require('./cart');
+const { setUser, getUser } = require('./users')
+const { getProducts } = require('./products')
+const {
+  getCartItems,
+  deleteCartItem,
+  addCartItem,
+  updateQuantity,
+} = require('./cart')
 
 module.exports = {
-    setUser,
-    getProducts,
-    getCartItems,
-    deleteCartItem,
-    addCartItem,
-    getUser
+  setUser,
+  getProducts,
+  getCartItems,
+  deleteCartItem,
+  addCartItem,
+  getUser,
+  updateQuantity,
 }

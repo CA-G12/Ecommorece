@@ -1,7 +1,7 @@
-const setUserQuery = require('./setUser');
-const getUserQuery = require('./getUserQuery');
+const setUserQuery = require('./setUser')
+const getUserQuery = require('./getUserQuery')
 
 module.exports = {
-    setUserQuery,
-    getUserQuery,
+  setUserQuery,
+  getUserQuery,
 }

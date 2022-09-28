@@ -1,8 +1,8 @@
-const router = require('express').Router();
+const router = require('express').Router()
 
-const userRouter = require('./userRoutes');
-const productsRouter = require('./productsRoutes');
-const cartItemsRoutes = require('./cartItemsRoutes');
+const userRouter = require('./userRoutes')
+const productsRouter = require('./productsRoutes')
+const cartItemsRoutes = require('./cartItemsRoutes')
 
 router.use(userRouter)
 router.use(productsRouter)
