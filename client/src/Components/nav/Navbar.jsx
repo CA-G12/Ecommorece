@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
+  const { auth } = props;
+  
   return (
     <div className="nav-bar">
       <h1>Fashonista</h1>
@@ -15,13 +17,13 @@ function Navbar() {
       </form>
       <div id="nav-right">
 
-        <Link to="/login">
+        <Link to={auth?"/cart":"/login"}>
           {' '}
-          <button type="submit">Sign In</button>
+          <button type="submit">{auth?"cart":"Sign In"}</button>
         </Link>
 
-        <Link to="/signup">
-          <button type="submit">Sign Up</button>
+        <Link to={auth?"/logout":"/signup"}>
+          <button type="submit">{auth?"log out":"Sign Up"}</button>
         </Link>
 
       </div>
