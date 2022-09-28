@@ -7,12 +7,13 @@ import DetailPage from './Components/datails/DetailPage'
 import Cart from './Components/cart/Cart'
 
 function App() {
-  const [auth, setAuth] = useState(false)
+  const [auth, setAuth] = useState(false);
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage auth={auth} />} />
+
+          <Route path="/" element={<LandingPage auth={auth} setAuth={setAuth}/>} />
           <Route path="/signup" element={<Signup setAuth={setAuth} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/DetailPage/:productId" element={<DetailPage />} />

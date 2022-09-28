@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 
 function Navbar(props) {
-  const { auth } = props;
-  
+
+  const { auth, setAuth } = props;
+
   return (
     <div className="nav-bar">
       <h1>Fashonista</h1>
@@ -17,14 +18,25 @@ function Navbar(props) {
       </form>
       <div id="nav-right">
 
-        <Link to={auth?"/cart":"/login"}>
+        <Link to={auth ? "/cart" : "/login"}>
           {' '}
-          <button type="submit">{auth?"cart":"Sign In"}</button>
+          <button type="submit">{auth ? "cart" : "Sign In"}</button>
         </Link>
 
-        <Link to={auth?"/logout":"/signup"}>
-          <button type="submit">{auth?"log out":"Sign Up"}</button>
-        </Link>
+        {!auth ?
+          <Link to="/signup" >
+            <button type="submit">Sign Up</button>
+          </Link>
+          :
+          <button
+            type='submit'
+            onClick={() => {
+              setAuth(false)
+            }}
+          >Log out</button>
+        }
+
+
 
       </div>
 
