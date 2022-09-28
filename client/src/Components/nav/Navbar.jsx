@@ -6,7 +6,7 @@ function Navbar(props) {
 
   return (
     <div className="nav-bar">
-      <h1>Fashonista</h1>
+     <Link to="/" style={{textDecoration : 'none',}}><h1>Fashonista</h1></Link> 
       <form id="search-form" role="search">
         <input
           id="search-bar"

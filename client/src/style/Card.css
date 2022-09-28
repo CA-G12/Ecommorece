@@ -48,7 +48,8 @@ root {
 .content .product-img {
     width: 100%;
     border-radius: 15px;
-    padding: 0.3rem;
+    padding: 0.3rem 0.3rem 1rem 0.3rem;
+    
 }
 
 .cart-counter {
@@ -89,6 +90,7 @@ root {
     line-height: 143%;
     letter-spacing: 0.018em;
     cursor: pointer;
+    text-align: center;
 }
 
 .card button:hover {
