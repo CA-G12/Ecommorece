@@ -34,9 +34,18 @@ function addToCart(productId, userId){
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({productId, userId}),
-  }).alert('added to cart')
+  })
 
 }
+
+
+function reomoveFromCart(cartid){
+
+  return fetch(`/deleteCartItem/${cartid}`).catch(err => console.log(err))
+
+}
+
+
 
 function Card({ name, card }) {
  
@@ -56,11 +65,11 @@ function Card({ name, card }) {
   }
 
   if (name === 'cart') {
-    //  console.log('hello from cart', card)
+    //  console.log('hello from cart', card.cartid)
     return (
       <div className="card">
         <div className="remove">
-          <button type="submit">x</button>
+          <button onClick={() => reomoveFromCart(card.cartid)} type="submit">x</button>
         </div>
         <Container card={card} />
         <Counter />
