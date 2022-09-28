@@ -1,5 +1,5 @@
 const { setUser, getUser } = require('./users')
-const { getProducts } = require('./products')
+const { getProducts,getProductsByName } = require('./products')
 const {
   getCartItems,
   deleteCartItem,
@@ -15,4 +15,5 @@ module.exports = {
   addCartItem,
   getUser,
   updateQuantity,
+  getProductsByName,
 }
