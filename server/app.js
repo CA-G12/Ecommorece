@@ -15,10 +15,8 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
 
-app.use(express.static(join(__dirname, '..', '..', 'public')))
+// app.use(express.static(join(__dirname, '..', '..', 'public')))
+
 app.use(router);
-app.get('/api', (req, res) => {
-  res.json({ message: 'home' }) // auth or home
-})
 
 module.exports = app
