@@ -13,6 +13,7 @@ function Counter() {
 }
 
 function Container({ card }) {
+  console.log('helo cont card', card);
   return (
     <div className="content">
       <img className="product-img" alt="product-img" src={card.img_url} />
@@ -24,8 +25,10 @@ function Container({ card }) {
 }
 
 function Card({ name, card }) {
-  if (name) {
-    if (name === 'auth') {
+    console.log('helo card', name);
+   
+ 
+    if (name === true) {
       return (
         <div className="card">
           <Container card={card} />
@@ -35,6 +38,7 @@ function Card({ name, card }) {
     }
 
     if (name === 'cart') {
+      console.log(card.id)
       return (
         <div className="card">
           <div className="remove">
@@ -45,14 +49,15 @@ function Card({ name, card }) {
         </div>
       )
     }
-    if (name === 'home') {
+    if (!name) {
+      console.log('')
       return (
         <div className="card">
           <Container card={card} />
         </div>
       )
     }
-  }
+  
 }
 
 export default Card
