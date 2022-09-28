@@ -1,5 +1,5 @@
-const getProductsQuery = require('./getProducts');
+const getProductsQuery = require('./getProducts')
 
 module.exports = {
-    getProductsQuery,
+  getProductsQuery,
 }
