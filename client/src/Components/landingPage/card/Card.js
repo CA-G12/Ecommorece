@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+// import { Link, } from 'react-router-dom';
 import '../../../style/Card.css'
 import Button from '../../button/Button'
 
@@ -13,7 +14,7 @@ function Counter() {
 }
 
 function Container({ card }) {
-  console.log('helo cont card', card);
+  // console.log('helo cont card', card);
   return (
     <div className="content">
       <img className="product-img" alt="product-img" src={card.img_url} />
@@ -24,40 +25,57 @@ function Container({ card }) {
   )
 }
 
-function Card({ name, card }) {
-    console.log('helo card', name);
-   
- 
-    if (name === true) {
-      return (
-        <div className="card">
-          <Container card={card} />
-          <Button className="add-btn" text="Add" widthh="3rem" />
-        </div>
-      )
-    }
+function addToCart(productId, userId){
 
-    if (name === 'cart') {
-      console.log(card.id)
-      return (
-        <div className="card">
-          <div className="remove">
-            <button type="submit">x</button>
-          </div>
-          <Container card={card} />
-          <Counter />
+  return fetch('/addCartItem', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({productId, userId}),
+  }).alert('added to cart')
+
+}
+
+function Card({ name, card }) {
+ 
+
+
+  if (name === true) {
+    // console.log('card id', card.id)
+    const userId = 1;
+    return (
+      <div className="card">
+        <Container card={card} />
+
+          <Button  onClick={() =>{addToCart(card.id,userId);}} disabled className="add-btn" text="Add" widthh="6rem" id={card.id} />     
+
+      </div>
+    )
+  }
+
+  if (name === 'cart') {
+    //  console.log('hello from cart', card)
+    return (
+      <div className="card">
+        <div className="remove">
+          <button type="submit">x</button>
         </div>
-      )
-    }
-    if (!name) {
-      console.log('')
-      return (
-        <div className="card">
-          <Container card={card} />
-        </div>
-      )
-    }
-  
+        <Container card={card} />
+        <Counter />
+      </div>
+    )
+  }
+  if (!name) {
+    // console.log('')
+    return (
+      <div className="card">
+        <Container card={card} />
+      </div>
+    )
+  }
+
 }
 
 export default Card
