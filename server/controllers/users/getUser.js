@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt')
-const  { getUserQuery } = require('../../database/queries/users')
+const { getUserQuery } = require('../../database/queries/users')
 const { CustomError } = require('../../errors/customError')
 
 const getUser = (req, res) => {
@@ -13,7 +13,8 @@ const getUser = (req, res) => {
       return bcrypt.compare(password, hashed)
     })
     .then((data) => {
-      if (!data) throw new CustomError('Password or username are not correct ', 400)
+      if (!data)
+        throw new CustomError('Password or username are not correct ', 400)
       res.json({ message: 'Logged in' })
     })
     .catch((err) => {

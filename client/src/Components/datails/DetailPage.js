@@ -1,5 +1,5 @@
-import Nav from '../nav/Navbar';
-import Details from './Details';
+import Nav from '../nav/Navbar'
+import Details from './Details'
 
 function DetailPage() {
   return (
@@ -7,8 +7,7 @@ function DetailPage() {
       <Nav />
       <Details />
     </>
-
-  );
+  )
 }
 
-export default DetailPage;
+export default DetailPage
