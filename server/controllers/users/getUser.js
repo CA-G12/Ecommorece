@@ -15,7 +15,7 @@ const getUser = (req, res) => {
     .then((data) => {
       if (!data)
         throw new CustomError('Password or username are not correct ', 400)
-      res.json({ message: 'Logged in' })
+      res.status(200).json({ message: 'Logged in' })
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {

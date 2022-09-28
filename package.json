@@ -6,7 +6,6 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node server/index.js",
     "dev": "cross-env NODE_ENV=development nodemon server/index.js",
-    "build": "cross-env NODE_ENV=development node server/database/config/build.js",
     "test": "jest",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "format": "npm run format:server && npm run format:client",

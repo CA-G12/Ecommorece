@@ -9,32 +9,33 @@ import '../../style/FilterCategory.css';
 function LandingPage({auth,setAuth}) {
   
   const [CategoryState, setCategoryState] = useState('all');
-  const [PriceState, setPriceState] = useState({ max: 10, min: 0 });
-  const [isAuth, setISAuth] = useState('notAuth');
+  const [PriceState, setPriceState] = useState({ max: 100, min: 0 });
+  const [cards, setCards] = useState([]);
   useEffect(() => {
-    fetch('/api')
+    fetch('/products')
       .then((res) => res.json())
       .then((data) => {
-        setISAuth(data.message);
+        // console.log(data)
+        setCards(data)
       });
-  });
+  },[]);
   // here i will make anther request to fetch data from the server and passed it into card object
-  const cards = [
-    {
-      name: 'ss',
-      description: 'desc',
-      price: 30,
-      category: 'Dresses',
-      img_url: 'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550',
-    },
-    {
-      name: 'ss',
-      description: 'desc',
-      price: 50,
-      category: 'Tops',
-      img_url: 'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550',
-    },
-  ];
+  // const cards = [
+  //   {
+  //     name: 'ss',
+  //     description: 'desc',
+  //     price: 30,
+  //     category: 'Dresses',
+  //     img_url: 'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550',
+  //   },
+  //   {
+  //     name: 'ss',
+  //     description: 'desc',
+  //     price: 50,
+  //     category: 'Tops',
+  //     img_url: 'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550',
+  //   },
+  // ];
   return (
 
     <div>
@@ -56,7 +57,9 @@ function LandingPage({auth,setAuth}) {
         >
 
           {
-            cards.filter((card) => (card.price >= PriceState.min && card.price <= PriceState.max) && (CategoryState === 'all' || card.category === CategoryState)).map((card) => <Card name={isAuth} card={card} key={Math.random() + Date.now()} />)
+            cards.filter((card) => (card.price >= PriceState.min && card.price <= PriceState.max) &&
+             (CategoryState === 'all' || card.category === CategoryState))
+             .map((card) => <Card name={auth} card={card} key={card.id} />)
           }
           
         </div>
