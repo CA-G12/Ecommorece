@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useState } from 'react';
 import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
@@ -10,17 +10,13 @@ import DetailPage from './Components/datails/DetailPage';
 import Cart from './Components/cart/Cart';
 
 function App() {
-  useEffect(() => {
-    fetch('/api')
-      .then((data) => data.json())
-      .then((data) => console.log(data))
-  })
+  const [auth,setAuth]=useState(false);
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<LandingPage auth={auth}/>} />
+          <Route path="/signup" element={<Signup setAuth={setAuth}/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/DetailPage/:productId" element={<DetailPage />} />
           <Route path="/cart" element={<Cart />} />
