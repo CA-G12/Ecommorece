@@ -4,9 +4,8 @@ import Nav from '../nav/Navbar'
 import Details from './Details'
 
 function DetailPage(auth) {
-  const { id } = useParams()
+  const {productId: id} = useParams()
   const [productDetails, setProductDetails] = useState(null)
-
   useEffect(() => {
     fetch(`/product/${id}`)
       .then((res) => res.json())

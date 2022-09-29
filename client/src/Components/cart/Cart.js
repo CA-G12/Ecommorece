@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Nav from '../nav/Navbar'
-import Card from '../landingPage/card/Card'
+import Card from '../card/Card'
 import Button from '../button/Button'
 import '../../style/cart.css'
 
@@ -29,7 +29,7 @@ function Cart({ auth, setAuth }) {
   useEffect(() => {
     getTotalPrice().then((data) => setTotalPrice(data[0].sum))
   }, [])
-
+console.log(cartData)
   if (cartData) {
     return (
       <>

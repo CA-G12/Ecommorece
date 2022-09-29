@@ -1,15 +1,31 @@
 /* eslint-disable react/prop-types */
 // import { Link, } from 'react-router-dom';
 import { Link } from 'react-router-dom'
-import '../../../style/Card.css'
-import Button from '../../button/Button'
+import '../../style/Card.css'
+import Button from '../button/Button'
 
-function Counter() {
+
+function updateQuantity(cartItemId, quantityValue) {
+
+  return fetch('/updateCartItemQuantity', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ cartItemId, quantityValue }),
+  }).then(data => data.json()).then(data => console.log('hello update', data))
+
+}
+
+
+function Counter({ cartId, quantity }) {
+  // console.log('from Counter', quantity)
   return (
     <div className="cart-counter">
-      <Button text="-" widthh="1.3rem" />
-      <p>1</p>
-      <Button text="+" widthh="1.3rem" />
+      <Button onClick={() => updateQuantity(cartId, -1)} text="-" widthh="1.3rem" />
+      <p>{quantity}</p>
+      <Button onClick={() => updateQuantity(cartId, 1)} text="+" widthh="1.3rem" />
     </div>
   )
 }
@@ -21,7 +37,7 @@ function Container({ card }) {
       <p className="product-name">{card.name}</p>
       <h3 className="product-price">{card.price}</h3>
       <p className="product-category">
-        {card.category} <Link to={`/detailPage/${card.id}`}>more...</Link>
+        {card.category} <Link to={`/detailPage/${card.productId ? card.productId : card.id}`}>more...</Link>
       </p>
     </div>
   )
@@ -70,7 +86,7 @@ function Card({ name, card }) {
           </button>
         </div>
         <Container card={card} />
-        <Counter />
+        <Counter cartId={card.cartid} quantity={card.quantity} />
       </div>
     )
   }

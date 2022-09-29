@@ -12,6 +12,7 @@ function addToCart(productId, userId) {
   })
 }
 function Details({ productDetails, auth }) {
+  console.log(productDetails, "details")
   return (
     <div className="details-container">
       <img

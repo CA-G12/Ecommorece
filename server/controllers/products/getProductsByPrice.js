@@ -1,8 +1,8 @@
-const { getProductsByNameQuery } = require('../../database/queries')
+const { getProductsByPriceQuery } = require('../../database/queries')
 
-const getProductsByName = (req, res) => {
-  const offset = 0
-  getProductsByNameQuery(req.params.name, offset)
+const getProductsByPrice = (req, res) => {
+  const offset = 0;
+  getProductsByPriceQuery(req.params.name,offset)
     .then((data) => {
       if (data.rowCount) {
         res.status(200).json(data.rows)
@@ -15,4 +15,4 @@ const getProductsByName = (req, res) => {
     })
 }
 
-module.exports = getProductsByName
+module.exports = getProductsByPrice;
