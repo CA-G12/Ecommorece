@@ -2,9 +2,10 @@ const bcrypt = require('bcrypt')
 const { getUserQuery } = require('../../database/queries/users')
 const { CustomError } = require('../../errors/customError')
 const createToken = require('../module/generateToken')
-let id
+
 
 const getUser = (req, res) => {
+  let id
   const { email, password } = req.body
   getUserQuery(email)
     .then((result) => {

@@ -9,7 +9,7 @@ const getProducts = (req, res) => {
         .then((count)=>{
           res.json({
             data:data.rows,
-            count:count.rows[0].count
+            count:count.rows[0].count || 0
           })
         }).catch();
       }else{
