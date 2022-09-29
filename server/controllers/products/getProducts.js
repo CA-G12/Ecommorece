@@ -1,11 +1,17 @@
-const { getProductsQuery } = require('../../database/queries')
+const { getProductsQuery ,getProductsCountQuery} = require('../../database/queries')
 
 const getProducts = (req, res) => {
-  const offset = 1
-  getProductsQuery(offset)
+  const {minPrice,maxPrice,name,category,offset} = req.query;
+  getProductsQuery(minPrice,maxPrice,offset,name,category==='all'?'':category)
     .then((data) => {
       if (data.rowCount) {
-        res.json(data.rows)
+        getProductsCountQuery(minPrice,maxPrice,name,category==='all'?'':category)
+        .then((count)=>{
+          res.json({
+            data:data.rows,
+            count:count.rows[0].count
+          })
+        }).catch();
       }else{
         res.json({msg:'No data Found!'})
       }

@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt')
 const { getUserQuery } = require('../../database/queries/users')
 const { CustomError } = require('../../errors/customError')
+const createToken = require('../module/generateToken')
+let id
 
 const getUser = (req, res) => {
   const { email, password } = req.body
@@ -9,13 +11,19 @@ const getUser = (req, res) => {
       if (result.rowCount === 0) {
         throw new CustomError('Password or username are not correct ', 400)
       }
+      id = result.rows[0].id
       const hashed = result.rows[0].password
       return bcrypt.compare(password, hashed)
     })
     .then((data) => {
       if (!data)
         throw new CustomError('Password or username are not correct ', 400)
-      res.status(200).json({ message: 'Logged in' })
+      return createToken(id)
+    })
+    .then((token) => {
+      res
+        .cookie('token', token, { httpOnly: true, secure: true })
+        .json({ message: 'logged' })
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {

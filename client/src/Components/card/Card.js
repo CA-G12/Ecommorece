@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 // import { Link, } from 'react-router-dom';
 import { Link } from 'react-router-dom'
-import '../../../style/Card.css'
-import Button from '../../button/Button'
+import '../../style/cart.css'
+import Button from '../button/Button'
 
 
 function updateQuantity(cartItemId, quantityValue){

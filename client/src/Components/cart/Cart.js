@@ -1,6 +1,6 @@
 import {useEffect, useState } from 'react'
 import Nav from '../nav/Navbar'
-import Card from '../landingPage/card/Card'
+import Card from '../card/Card'
 import '../../style/cart.css'
 
 
