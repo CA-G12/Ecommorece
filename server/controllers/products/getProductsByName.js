@@ -1,13 +1,13 @@
 const { getProductsByNameQuery } = require('../../database/queries')
 
 const getProductsByName = (req, res) => {
-  const offset = 0;
-  getProductsByNameQuery(req.params.name,offset)
+  const offset = 0
+  getProductsByNameQuery(req.params.name, offset)
     .then((data) => {
       if (data.rowCount) {
         res.json(data.rows)
-      }else{
-        res.json({msg:"No match found!"})
+      } else {
+        res.json({ msg: 'No match found!' })
       }
     })
     .catch((err) => {
@@ -15,4 +15,4 @@ const getProductsByName = (req, res) => {
     })
 }
 
-module.exports = getProductsByName;
+module.exports = getProductsByName

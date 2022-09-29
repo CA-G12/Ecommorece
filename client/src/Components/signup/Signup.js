@@ -61,7 +61,7 @@ function Signup({ setAuth }) {
           />
           <br />
           <button type="submit">Sign Up</button>
-          <Link to='/login'>You an account ? login</Link>
+          <Link to="/login">You an account ? login</Link>
         </form>
       </div>
     </div>

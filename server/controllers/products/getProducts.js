@@ -6,8 +6,8 @@ const getProducts = (req, res) => {
     .then((data) => {
       if (data.rowCount) {
         res.json(data.rows)
-      }else{
-        res.json({msg:'No data Found!'})
+      } else {
+        res.json({ msg: 'No data Found!' })
       }
     })
     .catch((err) => {

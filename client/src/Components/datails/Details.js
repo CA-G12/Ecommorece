@@ -2,7 +2,6 @@ import '../../style/details.css'
 import Button from '../button/Button'
 
 function addToCart(productId, userId) {
-
   return fetch('/addCartItem', {
     method: 'POST',
     headers: {
@@ -11,10 +10,8 @@ function addToCart(productId, userId) {
     },
     body: JSON.stringify({ productId, userId }),
   })
-
 }
 function Details({ productDetails, auth }) {
-
   return (
     <div className="details-container">
       <img
@@ -27,12 +24,17 @@ function Details({ productDetails, auth }) {
         <h3 className="product-price">${productDetails.price}</h3>
         <p className="product-category">{productDetails.category}</p>
         <p className="product-description">{productDetails.description}</p>
-        {/* {console.log(auth.auth)} */}
-        {(auth.auth) ?
+        {auth.auth ? (
           <div className="div-btn">
-            <Button onClick={() => { addToCart(productDetails.id, 1) }} text="Add to cart" widthh="13rem" />
+            <Button
+              onClick={() => {
+                addToCart(productDetails.id, 1)
+              }}
+              text="Add to cart"
+              widthh="13rem"
+            />
           </div>
-          : null}
+        ) : null}
       </div>
     </div>
   )

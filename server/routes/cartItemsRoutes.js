@@ -1,17 +1,19 @@
 const router = require('express').Router()
+const verifyToken = require('../controllers/module/verifyTokenjs')
+
 const {
   getCartItems,
   deleteCartItem,
   addCartItem,
   updateQuantity,
   deleteAllItems,
-  getTotalPrice
+  getTotalPrice,
 } = require('../controllers')
 
-router.get('/getCartItems', getCartItems)
-router.get('/deleteCartItem/:id', deleteCartItem)
-router.post('/addCartItem', addCartItem)
-router.post('/updateCartItemQuantity', updateQuantity)
+router.get('/getCartItems', verifyToken, getCartItems)
+router.get('/deleteCartItem/:id', verifyToken, deleteCartItem)
+router.post('/addCartItem', verifyToken, addCartItem)
+router.post('/updateCartItemQuantity', verifyToken, updateQuantity)
 router.get('/deleteAllItems', deleteAllItems)
-router.get('/getTotalPrice', getTotalPrice)
+router.get('/getTotalPrice', verifyToken, getTotalPrice)
 module.exports = router

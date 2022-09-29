@@ -2,9 +2,9 @@ const bcrypt = require('bcrypt')
 const { getUserQuery } = require('../../database/queries/users')
 const { CustomError } = require('../../errors/customError')
 const createToken = require('../module/generateToken')
-let id
 
 const getUser = (req, res) => {
+  let id = null
   const { email, password } = req.body
   getUserQuery(email)
     .then((result) => {
@@ -12,6 +12,7 @@ const getUser = (req, res) => {
         throw new CustomError('Password or username are not correct ', 400)
       }
       id = result.rows[0].id
+      console.log({ id: result.rows })
       const hashed = result.rows[0].password
       return bcrypt.compare(password, hashed)
     })
@@ -31,7 +32,7 @@ const getUser = (req, res) => {
           message: err.message,
         })
       }
-      res
+      return res
         .status(err.status || 500)
         .json({ message: err.message || 'Internal Server Error' })
     })

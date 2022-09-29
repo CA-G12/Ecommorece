@@ -11,5 +11,5 @@ module.exports = {
   addCartItemQuery,
   updateQuantityQuery,
   deleteAllItemsQuery,
-  totalPriceQuery
+  totalPriceQuery,
 }

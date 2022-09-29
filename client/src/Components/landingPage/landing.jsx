@@ -21,27 +21,10 @@ function LandingPage({ auth, setAuth }) {
     fetch('/products')
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data)
         setCards(data)
       })
   }, [])
-  // here i will make anther request to fetch data from the server and passed it into card object
-  // const cards = [
-  //   {
-  //     name: 'ss',
-  //     description: 'desc',
-  //     price: 30,
-  //     category: 'Dresses',
-  //     img_url: 'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550',
-  //   },
-  //   {
-  //     name: 'ss',
-  //     description: 'desc',
-  //     price: 50,
-  //     category: 'Tops',
-  //     img_url: 'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550',
-  //   },
-  // ];
+
   return (
     <div>
       <Nav auth={auth} setAuth={setAuth} />
