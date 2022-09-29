@@ -5,6 +5,7 @@ const {
   deleteCartItem,
   addCartItem,
   updateQuantity,
+  deleteAllItems
 } = require('./cart')
 
 module.exports = {
@@ -16,5 +17,6 @@ module.exports = {
   getUser,
   updateQuantity,
   getProductsByName,
-  getProductById
+  getProductById,
+  deleteAllItems
 }
