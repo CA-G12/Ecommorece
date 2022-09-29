@@ -16,7 +16,7 @@ function Cart({ auth, setAuth }) {
 
   useEffect(() => {
     fetch('/getCartItems').then(response => response.json()).then(data => setCardData(data));
-  })
+  }, [])
 
   // console.log(cartData);
 
@@ -27,7 +27,7 @@ function Cart({ auth, setAuth }) {
         <Nav auth={auth} setAuth={setAuth} />
         <div className='cartContainer'>
           {cartData.map((cartItem) => <Card name={auth ? 'cart' : ''} card={cartItem} key={cartItem.cartId} />)}
-          <Button onClick={()=>reomoveAllItems()} text='Delete' widthh='100px' />
+          <Button onClick={() => reomoveAllItems()} text='Buy' widthh='100px' />
         </div>
 
       </>
