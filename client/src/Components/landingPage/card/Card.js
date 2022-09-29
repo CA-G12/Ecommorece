@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import '../../../style/Card.css'
 import Button from '../../button/Button'
 
@@ -16,12 +17,16 @@ function Counter() {
 function Container({ card }) {
   // console.log('helo cont card', card);
   return (
-    <div className="content">
+
+      <div className="content">
       <img className="product-img" alt="product-img" src={card.img_url} />
       <p className="product-name">{card.name}</p>
       <h3 className="product-price">{card.price}</h3>
-      <p className="product-category">{card.category}</p>
+      <p className="product-category">{card.category} <Link to={`/detailPage/${card.id}`}>more...</Link></p>
+     
     </div>
+
+  
   )
 }
 
