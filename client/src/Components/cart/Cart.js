@@ -1,13 +1,12 @@
-import Nav from '../nav/Navbar'
-import Card from '../landingPage/card/Card'
+// import Nav from '../nav/Navbar'
+import Card from '../card/Card'
 
-function Cart({auth, setAuth}) {
+function Cart() {
   
   return (
-    <>
-      <Nav  auth={auth} setAuth={setAuth} />
-      <Card  name={auth ? "cart" : false} card="" />
-    </>
+    
+      <Card  name="cart" card="" />
+    
   )
 }
 

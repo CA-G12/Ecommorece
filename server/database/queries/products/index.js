@@ -1,7 +1,7 @@
 const getProductsQuery = require('./getProducts')
-const getProductsByNameQuery = require('./getProductsByName');
+const getProductsCountQuery = require('./getProductsCount');
 
 module.exports = {
   getProductsQuery,
-  getProductsByNameQuery,
+  getProductsCountQuery,
 }

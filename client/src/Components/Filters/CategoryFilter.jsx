@@ -1,4 +1,4 @@
-import '../../../style/FilterCategory.css';
+import '../../style/FilterCategory.css';
 
 function CategoryFilter({ CategoryState, setCategoryState }) {
   const categories = ['all', 'Dresses', 'Tops', 'Shoes', 'Jackets'];

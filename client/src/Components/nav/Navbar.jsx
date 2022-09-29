@@ -1,21 +1,25 @@
-import { Link, } from 'react-router-dom';
+import { Link,useLocation,NavLink } from 'react-router-dom';
 
 function Navbar(props) {
-
-  const { auth, setAuth } = props;
-
+  const location = useLocation();
+  const { auth, setAuth ,name,setName} = props;
   return (
     <div className="nav-bar">
-      <h1>Fashonista</h1>
-      <form id="search-form" role="search">
+    <NavLink to='/' className='logo'>
+    <h1>Fashonista</h1>
+    </NavLink>
+      {!(location.pathname==='/signup'||location.pathname==='/login')?(<form id="search-form" role="search">
         <input
           id="search-bar"
           placeholder="Search"
           type="search"
-
+          value={name}
+          onChange={
+            (e)=>{setName(e.target.value)}
+          }
         />
 
-      </form>
+      </form>):(<div>      </div>)}
       <div id="nav-right">
 
         <Link to={auth ? "/cart" : "/login"}>
