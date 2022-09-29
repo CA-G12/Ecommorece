@@ -1,9 +1,10 @@
 const getProductsQuery = require('./getProducts')
-const getProductsCountQuery = require('./getProductsCount');
-const getProductByIdQuery = require('./getProductById');
+const getProductByIdQuery = require('./getProductById')
+
+const getProductsCountQuery = require('./getProductsCount')
 
 module.exports = {
   getProductsQuery,
+  getProductByIdQuery,
   getProductsCountQuery,
-  getProductByIdQuery
 }

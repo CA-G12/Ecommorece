@@ -1,8 +1,8 @@
 const { getCartItemsByUserIdQuery } = require('../../database/queries')
 
 const getCartItems = (req, res) => {
-  // const {id} = req.params;
-  getCartItemsByUserIdQuery(1)
+  const { id } = req.token
+  getCartItemsByUserIdQuery(id)
     .then((data) => res.json(data.rows))
     .catch((err) => console.log(err))
 }

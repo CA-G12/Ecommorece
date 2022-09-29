@@ -1,10 +1,12 @@
 const { setUser, getUser } = require('./users')
-const { getProducts,getProductsByName , getProductById} = require('./products')
+const { getProducts, getProductsByName, getProductById } = require('./products')
 const {
   getCartItems,
   deleteCartItem,
   addCartItem,
   updateQuantity,
+  deleteAllItems,
+  getTotalPrice,
 } = require('./cart')
 
 module.exports = {
@@ -16,5 +18,7 @@ module.exports = {
   getUser,
   updateQuantity,
   getProductsByName,
-  getProductById
+  getProductById,
+  deleteAllItems,
+  getTotalPrice,
 }

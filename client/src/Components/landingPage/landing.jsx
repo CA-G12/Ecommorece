@@ -1,10 +1,16 @@
 import { Outlet } from 'react-router-dom';
-
+import {useState, useEffect} from 'react';
 import Nav from '../nav/Navbar';
 
-
-function LandingPage({auth,setAuth,name,setName}) {
- 
+function LandingPage({ auth, setAuth, name, setName }) {
+  
+  useEffect(() => {
+    fetch('/checkUserAuth')
+      .then((res) => res.json())
+      .then((data) => {
+        setAuth(data.massage)
+      })
+  }, [])
   
   return (
     <div>

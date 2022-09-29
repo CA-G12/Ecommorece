@@ -81,7 +81,7 @@ function ProductsPage({ auth, name }) {
 
                         pages.length ?
                             // eslint-disable-next-line react/no-array-index-key
-                            pages.map((ele, i) => <NavLink key={i} to={`/${i + 1}`}>{i + 1}</NavLink>) : (<h2>sami</h2>)
+                            pages.map((ele, i) => <NavLink key={i} to={`/${i + 1}`}>{i + 1}</NavLink>) : (<h2>...</h2>)
                     }
 
 

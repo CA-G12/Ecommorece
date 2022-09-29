@@ -3,9 +3,8 @@ const { getUserQuery } = require('../../database/queries/users')
 const { CustomError } = require('../../errors/customError')
 const createToken = require('../module/generateToken')
 
-
 const getUser = (req, res) => {
-  let id
+  let id = null
   const { email, password } = req.body
   getUserQuery(email)
     .then((result) => {
@@ -32,7 +31,7 @@ const getUser = (req, res) => {
           message: err.message,
         })
       }
-      res
+      return res
         .status(err.status || 500)
         .json({ message: err.message || 'Internal Server Error' })
     })

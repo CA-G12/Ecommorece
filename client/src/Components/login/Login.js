@@ -1,4 +1,4 @@
-import { useNavigate,Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import image from './cartIcon.png'
 import Button from '../button/Button'
 import '../../style/login.css'
@@ -26,33 +26,32 @@ function Login({ setAuth }) {
     <div className="container">
       <div className="container-content">
         <form
-            onSubmit={(event) => {
-              event.preventDefault()
-              fetchReq(event.target)
-                .then((res) => {
-                  if (res.status === 200) {
-                    setAuth(true)
-                    navigate('/')
-                  }
-                })
-                .catch((err) => {
-                  console.log(err)
-                })
-            }}
-            >
+          onSubmit={(event) => {
+            event.preventDefault()
+            fetchReq(event.target)
+              .then((res) => {
+                if (res.status === 200) {
+                  setAuth(true)
+                  navigate('/')
+                }
+              })
+              .catch((err) => {
+                console.log(err)
+              })
+          }}
+        >
           <img alt="tset" src={image} />
           <br />
           <br />
           <input type="email" placeholder="EMAIL" name="email" />
           <br />
           <br />
-          <input type="password" placeholder="PASSWORD" name="password"/>
+          <input type="password" placeholder="PASSWORD" name="password" />
           <br />
           <br />
           <Button text="Login" />
           {/* // eslint-disable-next-line react/no-unescaped-entities */}
-          <Link to='/signup'>You do not have an account ? signup</Link>
-
+          <Link to="/signup">You do not have an account ? signup</Link>
         </form>
       </div>
     </div>
