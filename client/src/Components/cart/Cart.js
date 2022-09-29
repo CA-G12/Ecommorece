@@ -9,7 +9,7 @@ function Cart({ auth, setAuth }) {
   const [totalPrice, setTotalPrice] = useState(0)
   function reomoveAllItems() {
     return fetch(`/deleteAllItems`)
-      .then((data) => {
+      .then(() => {
         setTotalPrice(0)
         setCardData([])
       })

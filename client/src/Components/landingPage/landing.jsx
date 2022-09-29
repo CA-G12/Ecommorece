@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import {useState, useEffect} from 'react';
+import { useEffect} from 'react';
 import Nav from '../nav/Navbar';
 
 function LandingPage({ auth, setAuth, name, setName }) {
