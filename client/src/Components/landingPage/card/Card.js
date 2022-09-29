@@ -4,25 +4,40 @@ import { Link } from 'react-router-dom'
 import '../../../style/Card.css'
 import Button from '../../button/Button'
 
-function Counter() {
+
+function updateQuantity(cartItemId, quantityValue){
+
+  return fetch('/updateCartItemQuantity', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({cartItemId, quantityValue}),
+  }).then(data => data.json()).then(data => console.log('hello update',data))
+
+}
+
+
+function Counter({cartId,quantity}) {
+  // console.log('from Counter', quantity)
   return (
     <div className="cart-counter">
-      <Button text="-" widthh="1.3rem" />
-      <p>1</p>
-      <Button text="+" widthh="1.3rem" />
+      <Button onClick={() => updateQuantity(cartId,-1 )}  text="-" widthh="1.3rem" />
+      <p>{quantity}</p>
+      <Button onClick={() => updateQuantity(cartId,1 )} text="+" widthh="1.3rem" />
     </div>
   )
 }
 
 function Container({ card }) {
-  // console.log('helo cont card', card);
   return (
 
       <div className="content">
       <img className="product-img" alt="product-img" src={card.img_url} />
       <p className="product-name">{card.name}</p>
       <h3 className="product-price">{card.price}</h3>
-      <p className="product-category">{card.category} <Link to={`/detailPage/${card.id}`}>more...</Link></p>
+      <p className="product-category">{card.category} <Link to={`/detailPage/${card.productid ? card.productid  : card.id }`}>more...</Link></p>
      
     </div>
 
@@ -52,6 +67,8 @@ function reomoveFromCart(cartid){
 
 
 
+
+
 function Card({ name, card }) {
  
 
@@ -62,6 +79,7 @@ function Card({ name, card }) {
     return (
       <div className="card">
         <Container card={card} />
+        <br />
           <Button  onClick={() =>{addToCart(card.id,userId);}} disabled className="add-btn" text="Add" widthh="6rem" id={card.id} />     
       </div>
     )
@@ -75,7 +93,7 @@ function Card({ name, card }) {
           <button onClick={() => reomoveFromCart(card.cartid)} type="submit">x</button>
         </div>
         <Container card={card} />
-        <Counter />
+        <Counter cartId={card.cartid } quantity={card.quantity} />
       </div>
     )
   }
