@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<LandingPage auth={auth} setAuth={setAuth}/>} />
           <Route path="/signup" element={<Signup setAuth={setAuth} />} />
           <Route path="/login" element={<Login setAuth={setAuth}/>} />
-          <Route path="/DetailPage/:productId" element={<DetailPage />} />
+          <Route path="/detailPage/:id" element={<DetailPage auth={auth} setAuth={setAuth}/>} />
           <Route path="/cart" element={<Cart auth={auth} setAuth={setAuth}/>} />
         </Routes>
       </BrowserRouter>
