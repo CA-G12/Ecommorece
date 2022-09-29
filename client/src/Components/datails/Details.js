@@ -1,7 +1,19 @@
 import '../../style/details.css'
-// import Button from '../button/Button'
+import Button from '../button/Button'
 
-function Details({ productDetails }) {
+function addToCart(productId, userId) {
+
+  return fetch('/addCartItem', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ productId, userId }),
+  })
+
+}
+function Details({ productDetails, auth }) {
 
   return (
     <div className="details-container">
@@ -15,14 +27,15 @@ function Details({ productDetails }) {
         <h3 className="product-price">${productDetails.price}</h3>
         <p className="product-category">{productDetails.category}</p>
         <p className="product-description">{productDetails.description}</p>
-
-        {/* {(auth) ?
+        {/* {console.log(auth.auth)} */}
+        {(auth.auth) ?
           <div className="div-btn">
-            <Button text="Add to cart" widthh="13rem" />
+            <Button onClick={() => { addToCart(productDetails.id, 1) }} text="Add to cart" widthh="13rem" />
           </div>
-          : null} */}
+          : null}
       </div>
     </div>
   )
 }
+
 export default Details

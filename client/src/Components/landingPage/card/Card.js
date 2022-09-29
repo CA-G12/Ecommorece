@@ -62,9 +62,7 @@ function Card({ name, card }) {
     return (
       <div className="card">
         <Container card={card} />
-
           <Button  onClick={() =>{addToCart(card.id,userId);}} disabled className="add-btn" text="Add" widthh="6rem" id={card.id} />     
-
       </div>
     )
   }
