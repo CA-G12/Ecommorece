@@ -11,24 +11,28 @@ function ProductsPage({ auth, name }) {
     const [CategoryState, setCategoryState] = useState('all');
     const [PriceState, setPriceState] = useState({ max: 100, min: 0 });
     const [cards, setCards] = useState([]);
-    
+
     const [pages, setPages] = useState([]);
 
 
 
     useEffect(() => {
-        
+
         fetch(`/products/?name=${name}&minPrice=${PriceState.min}&maxPrice=${PriceState.max}&category=${CategoryState}&offset=${((offset - 1) * 15)}`
 
         )
             .then((res) => res.json())
             .then((data) => {
-                const arr =new Array(Math.ceil(+data.count / 15));
+                if(data.msg === "No data Found!"){
+                   throw new  Error(data.msg) 
+                }
+                const arr = new Array(Math.ceil(+data.count / 15));
                 arr.fill(0)
                 setPages(arr)
                 setCards(data.data)
-            });
-            
+            })
+            .catch(err => console.log(err))
+
     }, [name, PriceState, CategoryState, offset]);
 
     return (
@@ -72,7 +76,7 @@ function ProductsPage({ auth, name }) {
 
                 </div>
                 <div className="pagination">
-                    <NavLink to={offset>1? `/${offset-1}`:''} >&laquo;</NavLink>
+                    <NavLink to={offset > 1 ? `/${offset - 1}` : ''} >&laquo;</NavLink>
                     {
 
                         pages.length ?
@@ -81,7 +85,7 @@ function ProductsPage({ auth, name }) {
                     }
 
 
-                    <NavLink to={offset<= pages.length?`/${offset+1}`:''}>&raquo;</NavLink>
+                    <NavLink to={offset <= pages.length ? `/${offset + 1}` : ''}>&raquo;</NavLink>
                 </div>
 
             </div>

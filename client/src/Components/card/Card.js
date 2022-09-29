@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // import { Link, } from 'react-router-dom';
 import { Link } from 'react-router-dom'
-import '../../style/cart.css'
+import '../../style/Card.css'
 import Button from '../button/Button'
 
 
