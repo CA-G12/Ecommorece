@@ -1,11 +1,12 @@
 const { setUserQuery, getUserQuery } = require('./users')
-const { getProductsQuery,getProductsByNameQuery,getProductByIdQuery } = require('./products')
+const { getProductsQuery, getProductsByNameQuery, getProductByIdQuery } = require('./products')
 const {
   getCartItemsByUserIdQuery,
   deleteCartItemQuery,
   addCartItemQuery,
   updateQuantityQuery,
-  deleteAllItemsQuery
+  deleteAllItemsQuery,
+  totalPriceQuery
 } = require('./cart')
 
 module.exports = {
@@ -18,5 +19,6 @@ module.exports = {
   updateQuantityQuery,
   getProductsByNameQuery,
   getProductByIdQuery,
-  deleteAllItemsQuery
+  deleteAllItemsQuery,
+  totalPriceQuery
 }
