@@ -12,7 +12,6 @@ const getUser = (req, res) => {
         throw new CustomError('Password or username are not correct ', 400)
       }
       id = result.rows[0].id
-      console.log({ id: result.rows })
       const hashed = result.rows[0].password
       return bcrypt.compare(password, hashed)
     })

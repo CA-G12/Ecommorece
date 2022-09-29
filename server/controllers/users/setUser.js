@@ -1,7 +1,6 @@
 const bcrypt = require('bcrypt')
 const { setUserQuery } = require('../../database/queries')
-const createToken = require('../module/generateToken');
-
+const createToken = require('../module/generateToken')
 
 const setUser = (req, res, next) => {
   let userId = null

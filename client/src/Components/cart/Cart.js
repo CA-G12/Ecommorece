@@ -29,7 +29,6 @@ function Cart({ auth, setAuth }) {
   useEffect(() => {
     getTotalPrice().then((data) => setTotalPrice(data[0].sum))
   }, [])
-console.log(cartData)
   if (cartData) {
     return (
       <>

@@ -6,8 +6,8 @@ const getProductsByName = (req, res) => {
     .then((data) => {
       if (data.rowCount) {
         res.status(200).json(data.rows)
-      }else{
-        res.status(200).json({msg:"No match found!"})
+      } else {
+        res.status(200).json({ msg: 'No match found!' })
       }
     })
     .catch((err) => {
