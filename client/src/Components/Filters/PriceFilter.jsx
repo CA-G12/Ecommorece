@@ -1,4 +1,4 @@
-import '../../../style/PriceFilter.css';
+import '../../style/PriceFilter.css';
 
 function PriceFilter({ PriceState, setPriceState }) {
   return (
@@ -10,7 +10,7 @@ function PriceFilter({ PriceState, setPriceState }) {
           type="range"
           name="max"
           min="0"
-          max="50"
+          max="100"
           id="max"
           value={PriceState.max}
           onChange={(e) => {
@@ -23,7 +23,7 @@ function PriceFilter({ PriceState, setPriceState }) {
           type="range"
           name="min"
           min="0"
-          max="50"
+          max="100"
           id="min"
           value={PriceState.min}
           onChange={(e) => {

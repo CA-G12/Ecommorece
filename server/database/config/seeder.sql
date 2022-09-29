@@ -5,63 +5,63 @@ values
     'Cole Best',
     'dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu',
     94,
-    'Eleanor',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
     'Neve Hunt',
     'interdum enim non nisi. Aenean eget metus. In nec orci.',
     49,
-    'Amelia',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
     'Yvette Foreman',
     'magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus.',
     21,
-    'Illiana',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
     'Mohammad Williams',
     'mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit a,',
     57,
-    'Shay',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
     'Kylan Norris',
     'lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras',
     48,
-    'Cassandra',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
     'Joel Cooke',
     'amet ornare lectus justo eu arcu. Morbi sit amet massa.',
     23,
-    'Alma',
+    'Casual',
     'http://google.com'
   ),
   (
     'Noel Delaney',
     'elit sed consequat auctor, nunc nulla vulputate dui, nec tempus',
     73,
-    'Dalton',
+    'Casual',
     'https://cnn.com'
   ),
   (
     'Tamekah Gillespie',
     'consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque',
     35,
-    'Danielle',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
     'Kylynn Hall',
     'dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate',
     91,
-    'Tucker',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
@@ -120,7 +120,7 @@ values
     'Matthew Moran',
     'blandit enim consequat purus. Maecenas libero est, congue a, aliquet',
     60,
-    'Nigel',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
@@ -151,7 +151,7 @@ values
     'Nicholas Greer',
     'pede et risus. Quisque libero lacus, varius et, euismod et,',
     50,
-    'Tops',
+    'Casual',
     'http://cdn.shopify.com/s/files/1/0601/6024/5917/products/the-heavyweight-t-shirt_white_1_53f1397f-5b41-429f-8569-cbc1c4c174aa.jpg?v=1661175550'
   ),
   (
