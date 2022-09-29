@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import image from './cartIcon.png'
 import '../../style/signup.css'
 
@@ -61,6 +61,7 @@ function Signup({ setAuth }) {
           />
           <br />
           <button type="submit">Sign Up</button>
+          <Link to='/login'>You an account ? login</Link>
         </form>
       </div>
     </div>

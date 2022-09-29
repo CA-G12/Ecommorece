@@ -13,7 +13,7 @@ function LandingPage({auth,setAuth,name,setName}) {
         <Outlet />
       </div>
     </div>
-  );
+  )
 }
 
-export default LandingPage;
+export default LandingPage

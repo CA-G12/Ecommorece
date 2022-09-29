@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import image from './cartIcon.png'
 import Button from '../button/Button'
 import '../../style/login.css'
@@ -50,6 +50,9 @@ function Login({ setAuth }) {
           <br />
           <br />
           <Button text="Login" />
+          {/* // eslint-disable-next-line react/no-unescaped-entities */}
+          <Link to='/signup'>You do not have an account ? signup</Link>
+
         </form>
       </div>
     </div>

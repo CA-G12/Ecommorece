@@ -1,8 +1,8 @@
 import '../../style/button.css'
 
-function Button({ text, widthh }) {
+function Button({ text, widthh, onClick }) {
   return (
-    <button type="submit" style={{ width: widthh || '100%' }}>
+    <button onClick={onClick} type="submit" style={{ width: widthh || '100%' }}>
       {text}
     </button>
   )
